@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook} from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import video1 from './img/312.mp4';
 import video2 from './img/123.mp4';
