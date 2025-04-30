@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ddronesv2/static/css/main.0f123326.css",
-    "main.js": "/ddronesv2/static/js/main.5d152623.js",
+    "main.css": "/ddronesv2/static/css/main.8dc2c901.css",
+    "main.js": "/ddronesv2/static/js/main.0550bc41.js",
     "static/js/453.f465436d.chunk.js": "/ddronesv2/static/js/453.f465436d.chunk.js",
     "static/media/123.mp4": "/ddronesv2/static/media/123.bc20b033ad1b0bb36185.mp4",
     "static/media/122.mp4": "/ddronesv2/static/media/122.dd546cd8fb40e01e0119.mp4",
@@ -13,12 +13,12 @@
     "static/media/12.png": "/ddronesv2/static/media/12.583ccc170b1ef8667c8d.png",
     "static/media/desert.jpg": "/ddronesv2/static/media/desert.5ca52093fd224a5713a4.jpg",
     "index.html": "/ddronesv2/index.html",
-    "main.0f123326.css.map": "/ddronesv2/static/css/main.0f123326.css.map",
-    "main.5d152623.js.map": "/ddronesv2/static/js/main.5d152623.js.map",
+    "main.8dc2c901.css.map": "/ddronesv2/static/css/main.8dc2c901.css.map",
+    "main.0550bc41.js.map": "/ddronesv2/static/js/main.0550bc41.js.map",
     "453.f465436d.chunk.js.map": "/ddronesv2/static/js/453.f465436d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f123326.css",
-    "static/js/main.5d152623.js"
+    "static/css/main.8dc2c901.css",
+    "static/js/main.0550bc41.js"
   ]
 }
