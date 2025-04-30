@@ -48,13 +48,16 @@
   text-align: center;
   z-index: 2;
   opacity: 0; /* Inicialmente invisível */
-  animation: fadeIn 3s forwards; /* Aumento do tempo de animação para 2 segundos */
+  animation: fadeIn 3s forwards; /* Aumento do tempo de animação para 3 segundos */
 }
 
 .carousel-text h2 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Tamanho padrão */
   margin-bottom: 20px;
   font-weight: bold;
+  line-height: 1.2;
+  max-width: 80%; /* Limita o texto para evitar que ele ocupe toda a largura */
+  white-space: normal;
 }
 
 .carousel-button-text {
@@ -108,5 +111,70 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .carousel-text h2 {
+    font-size: 2rem; /* Reduz o tamanho da fonte em telas menores */
+    margin-bottom: 15px;
+  }
+
+  .carousel-button {
+    font-size: 1.5rem; /* Reduz o tamanho do botão em telas menores */
+  }
+
+  .carousel-button-text {
+    font-size: 1rem; /* Ajusta o tamanho do texto do botão */
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-text {
+    top: 25%;
+  }
+
+  .carousel-text h2 {
+    font-size: 1.8rem; /* Reduz ainda mais o tamanho da fonte em telas pequenas */
+    margin-bottom: 10px;
+    max-width: 90%; /* Aumenta a largura máxima do texto */
+  }
+
+  .carousel-button {
+    font-size: 1.3rem; /* Ajuste para telas menores */
+  }
+
+  .carousel-button-text {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .carousel-indicators {
+    bottom: 10px; /* Move os indicadores para mais perto da parte inferior */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-text {
+    top: 20%; /* Ajuste da posição para telas menores */
+  }
+
+  .carousel-text h2 {
+    font-size: 1.5rem; /* Tamanho de fonte ainda menor para telas muito pequenas */
+  }
+
+  .carousel-button {
+    font-size: 1.2rem;
+  }
+
+  .carousel-button-text {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .carousel-indicators {
+    bottom: 5px; /* Ajusta ainda mais a posição dos indicadores */
   }
 }

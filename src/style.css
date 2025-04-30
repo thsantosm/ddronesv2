@@ -10,6 +10,7 @@ body, html {
   background-color: #f8f8f8;
   color: #333;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 img,
@@ -243,7 +244,7 @@ video {
 
 /* MENSAGEM DE AVISO */
 .danger {
-  color: #e60000;
+  color: #bb0000;
   text-align: center;
   font-weight: bold;
   margin-top: 20px;
@@ -251,7 +252,7 @@ video {
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -275,7 +276,7 @@ video {
   }
 
   .carousel-text {
-    top: 20%;
+    top: 30%;
     font-size: 1.5rem;
   }
 
@@ -311,5 +312,42 @@ video {
 
   .video-item {
     max-width: 90%;
+  }
+}
+
+/* RESPONSIVIDADE PARA MOBILE (MENOR QUE 600PX) */
+@media (max-width: 600px) {
+  .carousel-text {
+    font-size: 1.2rem;
+    top: 20%;
+  }
+
+  .carousel-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .carousel-text button {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .social-icons {
+    font-size: 1rem;
+  }
+
+  .gallery {
+    gap: 15px;
+  }
+
+  .video-item {
+    max-width: 95%;
   }
 }
