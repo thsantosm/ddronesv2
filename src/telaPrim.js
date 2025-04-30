@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook} from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import video1 from './img/312.mp4';
 import video2 from './img/123.mp4';
@@ -15,13 +15,6 @@ const App = () => {
   const [telefone, setTelefone] = useState('');
   const [evento, setEvento] = useState('');
   const [local, setLocal] = useState('');
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Detecta se o dispositivo é um dispositivo móvel
-    const checkMobile = window.innerWidth <= 768;
-    setIsMobile(checkMobile);
-  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,12 +27,12 @@ const App = () => {
   return (
     <div className="app">
       <header className="navbar">
-        <motion.img
-          src={logo}
-          alt="Logo"
+        <motion.img 
+          src={logo} 
+          alt="Logo" 
           className="logo"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.5 }}
         />
         <nav className="nav-links">
@@ -49,118 +42,65 @@ const App = () => {
         </nav>
         <div className="social-icons">
           <a href="https://instagram.com/digitaldronesudi" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faInstagram}  />
           </a>
           <a href="https://www.facebook.com/digitaldronesuberlandia" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} />
-          </a>
+          </a>          
         </div>
       </header>
       <Carousel />
-
+      
       <section className="content" id="sobre">
-        <motion.div
+        <motion.div 
           className="section"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-        >
+        ><br />
           <h2>Sobre</h2>
           <p>
-            Somos especialistas em captação de imagens aéreas com drones, unindo tecnologia e criatividade para entregar
-            resultados de alta qualidade. Desde abril de 2022, atuamos no mercado oferecendo soluções em imagens aéreas com
-            equipamentos modernos e adaptados às necessidades de cada cliente.
+            Somos especialistas em captação de imagens aéreas com drones, unindo tecnologia e criatividade para entregar resultados de alta qualidade.
+            Desde abril de 2022, atuamos no mercado oferecendo soluções em imagens aéreas com equipamentos modernos e adaptados às necessidades de cada cliente. Trabalhamos com pilotos de RPA (Aeronave Remotamente Pilotada) credenciados e habilitados de acordo com a legislação vigente (ANAC e DECEA).
+            Nossos serviços incluem:<br /><br />
+            - Captação de imagens aéreas (aerofotografia e videografia)<br />
+            - Cobertura de festas e eventos<br />
+            - Acompanhamento de obras<br />
+            - Vídeos de marketing para imóveis<br />
           </p>
         </motion.div>
 
         <section className="content" id="galeria">
-          <motion.div
-            className="section"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          <motion.div 
+            className="section" 
+            initial={{ opacity: 0, x: 50 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.6 }}
           >
             <h2>Galeria</h2>
-            <div className="gallery">
-              <video
-                src={video1}
-                alt="Drone Video 1"
-                className="video-item"
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls={isMobile ? false : true} // Habilita controles em desktop, desabilita em mobile
-              />
-              <video
-                src={video2}
-                alt="Drone Video 2"
-                className="video-item"
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls={isMobile ? false : true} // Habilita controles em desktop, desabilita em mobile
-              />
-              <video
-                src={video3}
-                alt="Drone Video 3"
-                className="video-item"
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls={isMobile ? false : true} // Habilita controles em desktop, desabilita em mobile
-              />
+            <div className="gallery">     
+              <video src={video1} alt="Drone Video 1" className="video-item" autoPlay muted loop playsInline />
+              <video src={video2} alt="Drone Video 1" className="video-item" autoPlay muted loop playsInline />
+              <video src={video3} alt="Drone Video 1" className="video-item" autoPlay muted loop playsInline />
             </div>
           </motion.div>
-          <p className="danger">É proibida a reprodução e utilização sem autorização prévia.</p>
-        </section>
+          <p className="danger">É proibida a reprodução e utilização sem autorização prévia</p>
+        </section>        
 
-        <motion.div
-          className="section"
-          id="contato"
+        <br />
+        <motion.div 
+          className="section" id="contato"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2>Contato</h2>
           <form className="contact-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Seu nome"
-              value={nome}
-              onChange={(e) => setNome(e.target.value)}
-              required
-            />
-            <input
-              type="email"
-              placeholder="Seu email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Telefone"
-              value={telefone}
-              onChange={(e) => setTelefone(e.target.value)}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Tipo de evento"
-              value={evento}
-              onChange={(e) => setEvento(e.target.value)}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Local do evento"
-              value={local}
-              onChange={(e) => setLocal(e.target.value)}
-              required
-            />
+            <input type="text" placeholder="Seu nome" value={nome} onChange={(e) => setNome(e.target.value)} required />
+            <input type="email" placeholder="Seu email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input type="text" placeholder="Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} required />
+            <input type="text" placeholder="Tipo de evento" value={evento} onChange={(e) => setEvento(e.target.value)} required />
+            <input type="text" placeholder="Local do evento" value={local} onChange={(e) => setLocal(e.target.value)} required />
             <button type="submit">Enviar para o WhatsApp</button>
           </form>
         </motion.div>

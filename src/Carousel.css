@@ -3,6 +3,9 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  display: flex; /* Adiciona flexbox para alinhamento */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
 }
 
 .carousel-image {
@@ -41,22 +44,18 @@
 
 .carousel-text {
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   text-align: center;
   z-index: 2;
-  opacity: 0; /* Inicialmente invisível */
-  animation: fadeIn 3s forwards; /* Aumento do tempo de animação para 3 segundos */
+  opacity: 0;
+  animation: fadeIn 3s forwards;
 }
 
 .carousel-text h2 {
-  font-size: 2.5rem; /* Tamanho padrão */
+  font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: bold;
   line-height: 1.2;
-  max-width: 80%; /* Limita o texto para evitar que ele ocupe toda a largura */
   white-space: normal;
 }
 
@@ -76,7 +75,6 @@
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Indicadores */
 .carousel-indicators {
   position: absolute;
   bottom: 20px;
@@ -117,33 +115,28 @@
 /* Responsividade */
 @media (max-width: 1024px) {
   .carousel-text h2 {
-    font-size: 2rem; /* Reduz o tamanho da fonte em telas menores */
+    font-size: 2rem;
     margin-bottom: 15px;
   }
 
   .carousel-button {
-    font-size: 1.5rem; /* Reduz o tamanho do botão em telas menores */
+    font-size: 1.5rem;
   }
 
   .carousel-button-text {
-    font-size: 1rem; /* Ajusta o tamanho do texto do botão */
+    font-size: 1rem;
     padding: 8px 15px;
   }
 }
 
 @media (max-width: 768px) {
-  .carousel-text {
-    top: 25%;
-  }
-
   .carousel-text h2 {
-    font-size: 1.8rem; /* Reduz ainda mais o tamanho da fonte em telas pequenas */
+    font-size: 1.8rem;
     margin-bottom: 10px;
-    max-width: 90%; /* Aumenta a largura máxima do texto */
   }
 
   .carousel-button {
-    font-size: 1.3rem; /* Ajuste para telas menores */
+    font-size: 1.3rem;
   }
 
   .carousel-button-text {
@@ -152,17 +145,13 @@
   }
 
   .carousel-indicators {
-    bottom: 10px; /* Move os indicadores para mais perto da parte inferior */
+    bottom: 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .carousel-text {
-    top: 20%; /* Ajuste da posição para telas menores */
-  }
-
   .carousel-text h2 {
-    font-size: 1.5rem; /* Tamanho de fonte ainda menor para telas muito pequenas */
+    font-size: 1.5rem;
   }
 
   .carousel-button {
@@ -175,6 +164,6 @@
   }
 
   .carousel-indicators {
-    bottom: 5px; /* Ajusta ainda mais a posição dos indicadores */
+    bottom: 5px;
   }
 }
