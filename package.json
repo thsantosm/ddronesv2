@@ -2,6 +2,7 @@
   "name": "ddronesvs2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://thsantosm.github.io/ddronesv2/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
@@ -11,7 +12,6 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^12.9.2",
-    "homepage": "https://thsantosm.github.io/ddronesv2/",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
